@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use TCG\Voyager\Traits\Seedable;
+// use Database\Seeds\VoyagerDummyDatabaseSeeder; 
 
 class VoyagerDatabaseSeeder extends Seeder
 {
@@ -24,5 +25,6 @@ class VoyagerDatabaseSeeder extends Seeder
         $this->seed('PermissionsTableSeeder');
         $this->seed('PermissionRoleTableSeeder');
         $this->seed('SettingsTableSeeder');
+        $this->call(VoyagerDummyDatabaseSeeder::class);
     }
 }
